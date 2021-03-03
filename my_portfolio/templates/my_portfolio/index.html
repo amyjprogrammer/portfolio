@@ -11,17 +11,22 @@
 		<title>Amy's Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
 		<link rel="stylesheet" href="{% static 'my_portfolio/assets/css/main.css' %}" />
 		<noscript><link rel="stylesheet" href="{% static 'my_portfolio/assets/css/noscript.css' %}" /></noscript>
+
 	</head>
 	<body class="is-preload">
-
+    {% include 'my_portfolio/nav_bar.html' %}
 		<!-- Header -->
 			<section id="header">
+
 				<div class="inner">
           <img src="{% static 'my_portfolio/images/rocket.png' %}" alt="" />
-					<h1>Hi, I'm <strong>Amy Jones</strong>, another fine<br />
-					little freebie from <a href="#">HTML5 UP</a>.</h1>
+					<h1>Hi, I'm <strong>Amy Jones</strong><br />
+					Django Web Developer</h1>
 					<p>Accumsan feugiat mi commodo erat lorem ipsum, sed magna<br />
 					lobortis feugiat sapien sed etiam volutpat accumsan.</p>
 					<ul class="actions special">
@@ -140,6 +145,9 @@
 			</section>
 
 		<!-- Scripts -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
 			<script src="{% static 'my_portfolio/assets/js/jquery.min.js' %}"></script>
 			<script src="{% static 'my_portfolio/assets/js/jquery.scrolly.min.js' %}"></script>
 			<script src="{% static 'my_portfolio/assets/js/browser.min.js' %}"></script>
