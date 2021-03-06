@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 
 ALLOWED_HOSTS = []
 
@@ -34,6 +34,9 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     #my apps
     'my_portfolio',
+
+    #django app
+    'storages',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -133,3 +136,14 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 from dotenv import load_dotenv
 load_dotenv()
+
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_KEY')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_KEY')
+AWS_STORAGE_BUCKET_NAME = "amyjprogrammer"
+AWS_S3_SIGNATURE_VERSION = "s3v4"
+AWS_S3_REGION_NAME = "us-east-2"
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
