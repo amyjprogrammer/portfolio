@@ -136,7 +136,6 @@ STATICFILES_DIRS = [
 
 
 
-
 from dotenv import load_dotenv
 load_dotenv()
 

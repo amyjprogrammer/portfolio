@@ -2009,6 +2009,7 @@ input, select, textarea {
 		text-align: center;
 	}
 
+
 	header p {
 		color: #999;
 		margin: 0 0 1.5em 0;
@@ -3510,5 +3511,8 @@ input, select, textarea {
 			#footer {
 				padding: 2em 1em 2em 1em ;
 			}
+
+	}
+
 
 	}
